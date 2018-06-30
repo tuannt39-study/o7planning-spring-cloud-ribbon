@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: LOCALHOSTUS
+
+server:
+    port: 8810
+
+eureka:
+    instance:
+        appname: LOCALHOSTUS
+    client:
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: 'http://localhost-us:8761/eureka/'
+ping-server:
+    ribbon:
+        eureka:
+            enabled: false
+        listOfServers: localhost:8801, localhost:8802, localhost:8803, localhost:8804, localhost:8805
+        ServerListRefreshInterval: 15000
